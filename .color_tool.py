@@ -23,3 +23,19 @@ if __name__ == '__main__':
         for code, color in color_list:
             _str += f"\033[{code}m\033[{codeY}m \\033[{code}m \033[0m "
         print(_str)
+
+    print('print fun colours forever?')
+    input()
+    from random import randint
+    bkdg_len = len(Bkgd) - 1
+    j = 0
+    str = ""
+    while True:
+        j += 1
+        i = randint(0, bkdg_len)
+        code = Bkgd[i]
+        str += f"\033[{code}m "
+        if j % 80 == 0:
+            str += f"\033[0m "
+            print(str)
+            str = ""
